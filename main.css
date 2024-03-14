@@ -1,0 +1,209 @@
+@keyframes nav-select {
+    from{
+      font-size: 17px;
+    }
+    to{
+      font-size: 25px;
+    }
+}
+  
+  
+ @font-face {
+    font-family: bold;
+    src: url("Font/Bold.ttf");
+}
+
+@font-face {
+    font-family: normal;
+    src: url(Font/Regular.ttf);
+}
+
+.topnav {
+    background-color: #000000a2;
+    position: fixed;
+    box-shadow: 15px 15px 15px 15px rgba(0,0,0,.8);
+    border-radius: 50px;
+  }
+  
+  /* Style the links inside the navigation bar */
+  .topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    border-radius: 50px;
+    font-family: normal;
+    
+  }
+  
+  /* Change the color of links on hover */
+  .topnav a:hover {
+    background: -webkit-linear-gradient(#222831, #EEEEEE);
+    color: #260801;
+    border-radius: 50px;
+    font-family: bold;
+    animation: nav-select;
+    animation-duration: 0.3s;
+    animation-fill-mode: forwards;
+  }
+  
+  /* Add a color to the active/current link */
+  .topnav a.active {
+    background: -webkit-linear-gradient(#4A688C, #DCBCA7);
+    color: #260801;
+    border-radius: 50px;
+    font-family: bold;
+
+}
+
+header {
+    width: 100%;
+    height: 70px;
+    background-color: #000000a2;
+    position: fixed;
+    box-shadow: 15px 15px 15px 15px rgba(0,0,0,.8); 
+}
+
+body {
+    background-color: black;
+}
+
+#background-video {
+    height: 100vh;
+    width: 100vw;
+    object-fit: cover;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+img {
+    border-radius: 130px;
+    box-shadow: 15px 15px 15px 15px rgba(0, 0, 0, 0.314); 
+
+}
+
+h1 {
+    text-align: center;
+    font-family: bold;
+    font-size: 100px;
+    color: white;
+}
+h2{
+    text-align: center;
+    font-family: bold;
+    font-size: 64px;
+    border: #000000a2;
+    color: white;
+}
+h3{
+    text-align: center;
+    font-family: normal;
+    font-size: 32px;
+    color: white;
+}
+
+.fullscreen{
+    width: 100%;
+    height: 100%;
+}
+
+.card2 {
+    background-color: #000000a2;
+    border-radius: 50px;
+    width: 85%;
+    display: inline-block;
+    box-shadow: 15px 15px 15px 15px rgba(0, 0, 0, 0.314); 
+}
+
+.card3 {
+  background-color: #000000a2;
+  border-radius: 50px;
+  width: 85%;
+  display: inline-block;
+  box-shadow: 15px 15px 15px 15px rgba(0, 0, 0, 0.314); 
+}
+
+.card3 img{
+  border-radius: 30px;
+}
+
+.card2 img{
+  border-radius: 30px;
+}
+
+
+.imageSlider {
+    margin: auto;
+    position: relative;
+    width: 100%;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+}
+
+.sliderTrack {
+    display: flex;
+    width: calc(1620px * 10);
+    animation: scroll 70s linear infinite;
+}
+
+.slide {
+    height: 500px;
+    width: 700px;
+    display: flex;
+    align-items: center;
+    perspective: 100px;
+    padding: 15px;
+  }
+  
+  .imageSlider::before,
+  .imageSlider::after {
+    background: linear-gradient(to right, black 0%, black 100%);
+    content: '';
+    height: 100%;
+    position: absolute;
+    width: 15%;
+    z-index: 5;
+  }
+  
+.imageSlider::before {
+    left: 0;
+    top: 0;
+    width: 1px;
+}
+  
+.imageSlider::after {
+    right: 0;
+    top: 0;
+    width: 1px;
+}
+
+@keyframes scroll {
+    0%{
+      transform: translateX(0);
+    }
+  
+    100%{
+      transform: translateX(calc(-250px * 17));
+    }
+}
+
+button {
+  border-radius: 50px;
+  border: #00000000;
+  font-family: bold;
+  font-size: 30px;
+  padding: 15px;
+  box-shadow: 15px 7px 15px 3px rgba(0,0,0,.8);
+  background-color: #222831; 
+}
+button img {
+  float: left;
+  border-radius: 0px;
+}
