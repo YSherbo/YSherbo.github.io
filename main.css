@@ -82,6 +82,24 @@ body {
     z-index: -1;
 }
 
+button {
+	border-radius: 50px;
+	border: #00000000;
+	font-family: bold;
+	padding: 15px;
+	font-size: 1.5vw;
+	box-shadow: 15px 7px 15px 3px rgba(0,0,0,.8);
+	background-color: #000000;
+	color: white;
+	transition: 250ms; 
+}
+button:hover {
+	transform: scale(1.1);
+	background-color: white;
+	color: #000000;
+}
+
+
 img {
     border-radius: 130px;
     box-shadow: 15px 15px 15px 15px rgba(0, 0, 0, 0.314); 
@@ -184,6 +202,17 @@ h3{
     width: 1px;
 }
 
+a {
+	color: white;
+	font-family: bold;
+	transition: transform 250ms; 
+}
+
+a {
+	text-decoration: none;
+}
+
+
 @keyframes scroll {
     0%{
       transform: translateX(0);
@@ -194,16 +223,93 @@ h3{
     }
 }
 
-button {
-  border-radius: 50px;
-  border: #00000000;
-  font-family: bold;
-  font-size: 30px;
-  padding: 15px;
-  box-shadow: 15px 7px 15px 3px rgba(0,0,0,.8);
-  background-color: #222831; 
+/* HTML: <div class="loader"></div> */
+.loader {
+	width: 50px;
+	aspect-ratio: 1;
+	display: grid;
+	border-radius: 50%;
+	background:
+	linear-gradient(0deg ,rgb(0 0 0/50%) 30%,#0000 0 70%,rgb(0 0 0/100%) 0) 50%/8% 100%,
+	linear-gradient(90deg,rgb(0 0 0/25%) 30%,#0000 0 70%,rgb(0 0 0/75% ) 0) 50%/100% 8%;
+	background-repeat: no-repeat;
+	animation: l23 1s infinite steps(12);
 }
-button img {
-  float: left;
-  border-radius: 0px;
+.loader::before,
+.loader::after {
+	content: "";
+	grid-area: 1/1;
+	border-radius: 50%;
+	background: inherit;
+	opacity: 0.915;
+	transform: rotate(30deg);
+}
+.loader::after {
+	opacity: 0.83;
+	transform: rotate(60deg);
+}
+@keyframes l23 {
+	100% {transform: rotate(1turn)}
+}
+.bold {
+	font-weight: bold;
+	font-family: Bold;
+}
+
+@media only screen and (max-width: 768px) {
+  .topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 50px;
+    font-family: normal;
+    
+  }
+
+  .card2 {
+    background-color: #000000a2;
+    border-radius: 50px;
+    width: 99%;
+    display: inline-block;
+    box-shadow: 15px 15px 15px 15px rgba(0, 0, 0, 0.314); 
+  }
+
+  .card3 {
+    background-color: #000000a2;
+    border-radius: 50px;
+    width: 99%;
+    display: inline-block;
+    box-shadow: 15px 15px 15px 15px rgba(0, 0, 0, 0.314); 
+  }
+
+
+  h1 {
+    font-size: 55px;
+  }
+
+  h2{
+    font-size: 30px;
+  }
+  h3{
+    font-size: 20px;
+  }
+
+
+
+	button {
+		border-radius: 50px;
+		border: #00000000;
+		font-family: bold;
+		padding: 15px;
+		font-size: 4vw;
+		box-shadow: 15px 7px 15px 3px rgba(0,0,0,.8);
+		background-color: #000000;
+		color: white;
+		transition: 250ms; 
+	}
+
+
 }
