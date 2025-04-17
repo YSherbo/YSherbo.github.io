@@ -1,50 +1,80 @@
+<!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" href="main.css">
-        <link rel="shortcut icon" type="image/x-icon" href="Images/Photo.jpg">
-        <link rel="manifest" href="manifest.json">
-        <meta name="viewport" content="user-scalable=no,width=device-width" />
-
-
-        <title>Youssef Sherbiney(YSherbo)</title>
-        <div class="topnav">
-            <a href="index.html">About</a>
-            <a href="Projects.html">Projects</a>
-            <a href="Skills.html">Skills</a>
-            <a href="Contact.html">Contact</a>
-        </div>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Youssef Sherbiney</title>
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <video id="background-video" autoplay loop muted poster="Images/BG.png">
-            <source src="Videos/BG.mp4" type="video/mp4">
-        </video>
-        <br><br><br><br><br><br><br>
-            <center> 
-            <img src="Images/Photo.jpg" width="20%">
-            <h1>Youssef Sherbiney</h1>
-            <h2>Waterpoloist, Software Engineer, Web Developer, App Developer, Game Developer and Programmer</h2>
-            <h3>🡣 Scroll To Learn More 🡣</h3>
-            </center>
-            <br><br><br><br><br><br><br>
+
+        <div class="main">
             <center>
-            <div class="card2">
-                <h1>Who I Am?</h1>
-                <br><br><br>
-                <h3>Hello, My Name is Youssef and I am a Waterpoloist, Software Developer, <br>
-                Web Developer, App Developer, Game Developer, Programmer, Ethical 
-                Hacker and founder of Catalyst. and i<br>
-                am really intrested and looking forward in the future of<br> 
-                web, cybersecurity and tech in general. i also Made Many Projects<br>
-                (Some I made and some with my Team), Check Em Out<br>
-                </h3>
-            </div>
+                <img class="profile" src="images/Profile.jpg">
+                <h1>Youssef Sherbiney</h1>
+                <p>Student, Developer, Programer</p>
+                <button>Contact me</button>
+                <button>Github</button>
+                <p>youssefsherbiney@gmail.com<br>
+                +201033723200</p>
             </center>
-            <br><br><br><br><br>    
+        </div>
+        <p class="Scrolltext">Scroll down to learn more</p>
+        <div class="Overview">
+            <h1>Professional Overview</h1><br>
+            <p>
+                Motivated and self-taught high school programmer with a strong background in full-stack web
+                development, ethical hacking, embedded systems, and game design. Proficient in modern web
+                technologies like Node.js, MongoDB, HTML/CSS, and frontend design, alongside strong capabilities
+                in Unity for interactive apps and Arduino for robotics. Confident with programming languages such
+                as C++, C#, JavaScript, Python, and Java. Passionate about building innovative, real-world
+                solutions and currently seeking an internship to gain professional experience and mentorship.
+            </p>
+        </div>
+        <div class="card-container">
+            <h1>My Projects</h1><br><br>
+            <div class="card">
+                    <img src="images/learnify-banner.jpg" alt="Learnify" width="100%">
+                    <h1>Learnify</h1>
+                    <p>Technologies: Node.js, MongoDB, Express, Gemini API<br><br>
+                        An AI-powered web app that generates personalized learning paths from top resources and videos.
+                        Features include AI-generated text explanations and quizzes (multiple choice, coding, essay).
+                        Upcoming: real-time classes. Submitted to Gemini API Developer Competition.</p>
+                    <button>Try Now</button>
+            </div>
+            <div class="card">
+                    <img src="images/HighMixed-banner.png" alt="Highmixed" width="100%">
+                    <h1>Highmixed</h1>
+                    <p>Technologies: Unity<br><br>
+                        An Android app delivering a mixed reality experience inspired by Apple Vision Pro and Meta Quest
+                        3. Allows browsing, media consumption, file editing, and gameplay within a virtual interface.</p>
+                        <br><br>
+                    <button>Try Now</button>
 
-            <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>        
-            <script src="script.js"></script>
+            </div>
+            <div class="card">
+                    <img src="images/Cybergrip-banner.jpg" alt="Highmixed" width="100%">
+                    <h1>Cybergrip</h1>
+                    <p>Technologies: Arduino, Python, PyFirmata, OpenCV, CVZone<br><br>
+                        An automated robotic arm for industrial use that performs quality checks and sorting via machine
+                        vision. Includes manual hand-tracking mode. Won 1st place in Egypt at the International Codeavour
+                        Competition</p>
+                        <br><br><br><br>
+            </div>
+        </div>
+        <div class="Skills">
+            <h1>Technical Skills</h1><br>
+            <p>
+                Languages: JavaScript, Python, C++, C#, Java, HTML/CSS<br>
+                Frameworks/Tools: Node.js, Express, Unity, Arduino IDE<br>
+                Databases: MongoDB<br>
+                Cybersecurity: Penetration Testing, Kali Linux, Metasploit<br>
+                Platforms: Linux (Arch, Ubuntu, Kali), Windows<br>
+                Frontend: HTML5, CSS3, DOM Manipulation<br>
+                Hardware/IoT: Arduino (UNO, Nano), OpenCV, CVZone<br>
+                Other: REST APIs, WebSockets, Git/GitHub
+            </p>
+        </div>
 
-    
     </body>
-
 </html>
