@@ -1,162 +1,315 @@
 @font-face {
     font-family: Bold;
-    src: url(Font/Bold.ttf);
-}
-@font-face {
-    font-family: ExtraBold;
-    src: url(Font/ExtraBold.ttf);
+    src: url(./Font/Merriweather-Bold.ttf);
 }
 @font-face {
     font-family: Regular;
-    src: url(Font/Regular.ttf);
+    src: url(./Font/Merriweather.ttf);
 }
 @font-face {
     font-family: Thin;
-    src: url(Font/Regular.ttf);
-}
-a {
-    text-decoration: none;
-    color: white;
-}
-a:hover {
-    color: #3c3c3c;
-    text-decoration: none;
+    src: url(./Font/Merriweather-Light.ttf);
 }
 
+/* Color Pallette: 
+   Primary: #dec5a9
+   Secondary: #dec5a9
+   Accent: #F0EEE4
+   Background: #121212
+   Text: #F0EEE4
+*/
 body {
-    background-color: #222222;
-    color: white;
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+    color: #dec5a9;
+    font-family: Regular, sans-serif;
 }
 
-.main {
-    position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
+nav {
+  position: absolute;
+  top: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: inline-block;
+  border-radius: 30px;
+  animation: slide-in 1s ease-out;
 }
 
-.Scrolltext {
-    position: absolute;
-	top: 90%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-}
-
-
-h1 {
-    font-family: Bold;
-}
-
-p {
-    font-family: Regular;
-}
-
-.profile {
-    border-radius: 96px;
-    width: 20%;
-    height: 20%;
-    box-shadow: 0 4px 8px black;
-}
-
-.Overview {
-    position: absolute;
-	top: 120%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-}
-
-.Skills {
-    position: absolute;
-	top: 250%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-}
-
-
-.card-container {
-    display: flex; /* Enable flexbox */
-    flex-wrap: wrap; /* Allow wrapping to the next row */
-    justify-content: center; /* Center the cards horizontally */
-    gap: 20px; /* Add space between cards */
-    margin-top: 150vh; /* Position the container below the viewport */
-    padding: 20px; /* Optional: Add padding around the container */
-}
-
-.card-container h1 {
-    font-family: Bold;
-    color: white;
-    margin-bottom: 20px; /* Space between heading and cards */
-    width: 100%;
-    text-align: center; /* Ensure it spans the full width of the container */
-}
-.card-container p {
-    font-family: Regular;
-    color: white;
-    margin-bottom: 20px; /* Space between paragraph and cards */
-    width: 100%; /* Ensure it spans the full width of the container */
-}
-
-.card {
-    position: relative; /* Change to relative for proper layout inside flexbox */
-    background-color: #2c2c2c;
-    border-radius: 20px;
-    padding: 20px;
-    width: 20%; /* Adjust width as needed */
-    height: 40%; /* Adjust height as needed */
-    box-shadow: 0 4px 8px black;
-}
-
-.card:hover {
-    background-color: #3c3c3c;
-    box-shadow: 0 8px 16px black;
-    transition: all 0.3s ease;
-}
-.card img {
-    border-radius: 20px;
-    width: 100%;
-    height: 100%;
-    box-shadow: 0 4px 8px black;
-}
-
-.card h1 {
-    font-family: Bold;
-    color: white;
-    text-align: left;
-}
-
-button {
-    background-color: #00000000;
-    color: white;
-    border: 2px, solid, white;
-    padding: 10px 20px;
+ul {
+  position: relative;
+  display: flex;
+  flex: 1 1 auto;
+  margin: 0;
+  padding: 0 30px;
+  list-style-type: none;
+  li:not(:last-child) {
+    margin-right: 40px;
+  }
+  li {
+    border: 2px solid transparent;
     border-radius: 5px;
-    cursor: pointer;
-    font-family: Bold;
-    box-shadow: 0 4px 8px black;
-}
-button:hover {
-    color: #3c3c3c;
-    background-color: white;
-    box-shadow: 0 8px 16px black;
-    transition: all 0.3s ease;
+    padding: 10px;
+    transition: background 0.2s;
+    a {
+      color: #dec5a9;
+      text-decoration: none;
+      text-transform: uppercase;
+      transition: color 0.2s;
+    }
+    ul {
+      visibility: hidden;
+      opacity: 0;
+      position: absolute;
+      display: block;
+      margin: 12px -12px;
+      padding: 0;
+      background: #121212;
+      border: 2px solid #dec5a9;
+      border-right: 2px solid #dec5a9;
+      border-bottom: 2px solid #dec5a9;
+      border-radius: 30px;
+      transition: opacity 0.2s, visibility 0.2s;
+      li {
+        margin: -2px 0 0 -2px;
+        width: calc(100% - 20px);
+        line-height: 1.7;
+        a {
+          color: #dec5a9;
+        }
+      }
+    }
+    &:hover {
+      background: #dec5a9;
+      border: 2px solid #dec5a9;
+      border-right: 2px solid #dec5a9;
+      border-bottom: 2px solid #dec5a9;
+      color: #121212;
+      a {
+        color: #121212;
+      }
+      p {
+        color: #121212;
+      }
+      ul {
+        visibility: visible;
+        opacity: 1;
+        box-shadow: 0px 3px 5px 2px #EBECF1;
+        li {
+          a {
+            color: #dec5a9;
+          }
+        }
+      }
+    }
+  }
 }
 
-@media only screen and (max-width: 768px) {
-    .profile {
-        width: 70%;
-        height: 70%;
+@keyframes slide-in {
+  0% {
+    top: -50px;
+  }
+  40% {
+    top: 20px;
+  }
+  70% {
+    top: 10px;
+  }
+  100% {
+    top: 15px;
+  }
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+main img {
+    border-radius: 50%;
+    margin-bottom: 20px;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+main h1 {
+    font-family: Bold, sans-serif;
+    font-size: 4em;
+    margin: 10px 0;
+}
+main p {
+    font-family: Regular, sans-serif;
+    font-size: 1.5em;
+    text-align: center;
+    max-width: 800px;
+}
+
+main a {
+    font-family: Bold, sans-serif;
+    font-size: 1.2em;
+    color: #dec5a9;
+    text-decoration: none;
+    border: 2px solid #dec5a9;
+    border-radius: 5px;
+    padding: 10px 20px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+main a:hover {
+    background-color: #dec5a9;
+    color: #121212;
+}
+
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: fit-content;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+section h1 {
+    font-family: Bold, sans-serif;
+    font-size: 3em;
+    margin: 10px 0;
+}
+
+section p {
+    font-family: Regular, sans-serif;
+    font-size: 1.2em;
+    max-width: 600px;
+    text-align: center;
+    margin: 0 20px 20px 20px;
+}
+
+section a {
+    font-family: Bold, sans-serif;
+    font-size: 1.2em;
+    color: #dec5a9;
+    text-decoration: none;
+    border: 2px solid #dec5a9;
+    border-radius: 5px;
+    padding: 10px 20px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+section a:hover {
+    background-color: #dec5a9;
+    color: #121212;
+}
+
+section li {
+    font-family: Regular, sans-serif;
+    font-size: 1em;
+    margin: 5px 0;
+}
+
+section ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin: 10px 0 20px 0;
+}
+
+section img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    font-family: Thin, sans-serif;
+    font-size: 0.9em;
+    color: #dec5a9;
+}
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+    main h1 {
+        font-size: 3em;
     }
-    .card {
-        width: 90%;
-        height: 90%;
+    main p {
+        font-size: 1.2em;
+        max-width: 90%;
     }
-    .card-container {
-        margin-top: 200vh; /* Adjust margin for smaller screens */
+    main a {
+        font-size: 1em;
+        padding: 8px 16px;
     }
-    .Overview {
-        top: 150%;
+    section h1 {
+        font-size: 2em;
     }
-    .Skills {
-        top: 495vh;
+    section p {
+        font-size: 1em;
+        max-width: 90%;
+    }
+    section a {
+        font-size: 1em;
+        padding: 8px 16px;
+    }
+    section li {
+        font-size: 0.9em;
+    }
+    section ul {
+        padding-left: 15px;
+    }
+    section img {
+        width: 100%;
+        margin: 15px 0;
     }
 }
+
+@media (max-width: 480px) {
+    nav {
+        top: 10px;
+    }
+    ul {
+        flex-direction: column;
+        align-items: center;
+        li:not(:last-child) {
+            margin-right: 0;
+            margin-bottom: 10px;
+        }
+    }
+    main h1 {
+        font-size: 2em;
+    }
+    main p {
+        font-size: 1em;
+        max-width: 90%;
+    }
+    main a {
+        font-size: 1em;
+        padding: 8px 16px;
+    }
+    section h1 {
+        font-size: 1.5em;
+    }
+    section p {
+        font-size: 0.9em;
+    }
+    section a {
+        font-size: 0.9em;
+        padding: 6px 12px;
+    }
+    section li {
+        font-size: 0.9em;
+    }
+    section ul {
+        padding-left: 15px;
+    }
+    section img {
+        width: 100%;
+        margin: 15px 0;
+    }
+}
+
+/* End of Style.css */
