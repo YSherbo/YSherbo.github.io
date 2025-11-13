@@ -18,12 +18,75 @@
    Background: #121212
    Text: #F0EEE4
 */
+
+/* Cool infinite background scrolling animation.
+ * Twitter: @kootoopas
+ */
+/* Exo thin font from Google. */
+@import url(https://fonts.googleapis.com/css?family=Exo:100);
+/* Background data (Original source: https://subtlepatterns.com/grid-me/) */
+/* Animations */
+@-webkit-keyframes bg-scrolling-reverse {
+  100% {
+    background-position: 50px 50px;
+  }
+}
+@-moz-keyframes bg-scrolling-reverse {
+  100% {
+    background-position: 50px 50px;
+  }
+}
+@-o-keyframes bg-scrolling-reverse {
+  100% {
+    background-position: 50px 50px;
+  }
+}
+@keyframes bg-scrolling-reverse {
+  100% {
+    background-position: 50px 50px;
+  }
+}
+@-webkit-keyframes bg-scrolling {
+  0% {
+    background-position: 50px 50px;
+  }
+}
+@-moz-keyframes bg-scrolling {
+  0% {
+    background-position: 50px 50px;
+  }
+}
+@-o-keyframes bg-scrolling {
+  0% {
+    background-position: 50px 50px;
+  }
+}
+@keyframes bg-scrolling {
+  0% {
+    background-position: 50px 50px;
+  }
+}
+/* Main styles */
 body {
-    margin: 0;
-    padding: 0;
-    background-color: #121212;
-    color: #dec5a9;
-    font-family: Regular, sans-serif;
+  margin-top: 13.5rem;
+  color: #dec5a9;
+  text-align: center;
+  font-family: Regular, sans-serif;
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAFIUlEQVR4AdRaS3IUMQy15xKQK8DRoMIaiiVF1oRPwQnhFkZfW5Zlt7sJVdDlj/T09Cz19EwygduP79/Kyxcv/+uJPdw+ff6S7u9fpZ+/fv7T89ekPqz98fFruqWS0tt379OVK19J2siJdKHMMFNrv4XRSCkgzsQDqoPwAJ0cQo+thPdWzc29wCsSUV2F9hBrR6kpN0azGpOxkjKVWyTAnjhmY7YBEiSm6JJXJEgwbDxOGWhjSP0qrEBRhr+zTNCo7qxlPUR0BngAJShCGgmjyV4FyOpjSUUdMNCnG6xYuAMxxKVhEpkQAJ6HOSKNAPNwYCGchJalF22SwxLqHMEWW1nEIDQPc0Qa8YdmLQ0kYGSYNDiJzG4RXDYMdU+95uuOhNNznSyNSAWVW/hJ0TduqYG944EuisxXB3eIMbi/cgomz3OkESAg23PrG9cHgH91oBScBWNbAVOU3OUZpzVCbBPRzIM9zACtEFctiMNQ79TePRwiglhrhOQkQvbeMmZwCyM+0WP6GFRcd33XBsIZMNcI69Vcdt2qUd55tRRQte7CptwZHfAujtUOWsQglBtpPoDd5w34fsAJBPHOKwGnF3wkVkmddudoVgO5kepjR9VR9uUd1ebJEMWjYJtz9iPcSOWjcnUuGq2ytZpEZbt4GKfBka4RxLO+rdCRmWXvtxjdrCxO7g+YeNlXCEcGjcgPw04EmJ2PTv9e0p+dGDk98ypjDEYVBo2A6JgLYD+y+xSpPzs3cknJ3htrU9Auy2Alxo1s5NbCq1Rii3J3u+GUYZ2lz3AQiBuBwJ8N6gYk4pNjFOg6IF05ulMI8OTfHwmv2TdEjG3M7pCQTydLpLFLWIzQZCtmzx1fI0KgLU++6iZ7Zet0diTZEaYFHGdanejNrXGsDtU2Hi2kadrZfScXS3G6A8QAr4YLAJ4A284rYhKdiQIO6t2QkLvXSb7oQl6GKQOrE5M3BnhlhFYDbLwilOIOZ8zoMODXkIAPiim65oTkGj0yuJFIFzMNHh1jwsg+mJZ9Us2mWtucyI14XSV73CSiWcPKR3A6K3vCWMRtyNpGiRsxAJkTcpLfQ4a6Z3wSMwsm4jTQJTPQiBuZqcuP86O69Rzdqxwm4qxAMwZuC40WafQZ+41QHi2jsEPoHMB0B/NwnOGyWJ8xbWQomfJoYZ2tdVA5zJKnt/E2JW5pQhxKnvDaiZFVZvJpFpCnN5296N9HtpIKsC40g2mQaYaI1ID4htGZldehg3PzyEyWcCtKQMsmlxaHNVcsK4KQ9xFz0z1v7hggB7/9hrKQGeIgoYPiuAA3yXODboKLINgvD/e8qW7Ty5u/a42Z7Vek5C7i0lIDvQfwdmcbRKIErwgcc36QmKRZW14ZidTNfUuu+GgMtwAo3QFyQzO8Ig5PVy57nrX5b/qDYkdxUV+O96Vyl5WgEVLNQ2AfiHMZ5XVfq5ZZU6i86s0N+dTapUdCmtsXzSivmNVHEXnaKY08hWgrOlJbR6OMc9h+I+6zXI/523dazzna9xtxn+UqTHe6dlMNDa/3iL7AMKTTCx80gmk+JfCpmwB30KBm8zRoMc0XrMDHeQEMJ2zdOGgkSunynbPmL6PLIBxDjc5Jy0Yy3AGQCEYOsAVk6dZ2KRjCaeHqDz3UCNGpkYePH8jxC/69w2PsD6oMz1ZLt7blQ10Ywtng/i/+DW/WwwPXfntz/zrh/3e6e36Xzs/nkqN7pLGKIV/iz9D2U2J3HkefY4+fvtL/N/sNAAD///vgc0EAAAAGSURBVAMAYIrFzTK+nz0AAAAASUVORK5CYII=") repeat 0 0;
+  -webkit-animation: bg-scrolling-reverse 0.92s infinite;
+  /* Safari 4+ */
+  -moz-animation: bg-scrolling-reverse 0.92s infinite;
+  /* Fx 5+ */
+  -o-animation: bg-scrolling-reverse 0.92s infinite;
+  /* Opera 12+ */
+  animation: bg-scrolling-reverse 0.92s infinite;
+  /* IE 10+ */
+  -webkit-animation-timing-function: linear;
+  -moz-animation-timing-function: linear;
+  -o-animation-timing-function: linear;
+  animation-timing-function: linear;
+  margin: 0;
+  padding: 0;
 }
 
 nav {
@@ -168,7 +231,6 @@ section {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 100vh;
     height: fit-content;
     width: 100%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
