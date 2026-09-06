@@ -25,7 +25,7 @@ body {
     width: 100vw;
     height: 100vh;
     z-index: -1;
-    background: linear-gradient(var(--angle), #591b26, #000 45%);
+    background: linear-gradient(var(--angle), #bfb38e, #000 45%);
     animation: rotate-bg 100s linear infinite;
 }
 
@@ -65,7 +65,7 @@ nav a {
     transition: color 0.3s;
 }
 nav a:hover {
-    color: #591b26;
+    color: #bfb38e;
 }
 
 /* Main Section */
@@ -82,7 +82,7 @@ main {
     width: 220px;
     height: 220px;
     border-radius: 50%;
-    border: 4px solid #591b26;
+    border: 4px solid #bfb38e;
     object-fit: cover;
     margin-bottom: 20px;
 }
@@ -96,7 +96,7 @@ section {
 }
 h2 {
     font-size: 2.5rem;
-    color: #591b26;
+    color: #bfb38e;
     margin-bottom: 20px;
 }
 
@@ -110,7 +110,7 @@ h2 {
 
 .card {
     background: rgba(0, 0, 0, 0.6);
-    border: 1px solid #591b26;
+    border: 1px solid #bfb38e;
     border-radius: 15px;
     padding: 25px;
     cursor: pointer;
@@ -152,7 +152,7 @@ h2 {
 .btn {
     display: inline-block;
     padding: 10px 20px;
-    background: #591b26;
+    background: #bfb38e;
     color: #000;
     text-decoration: none;
     border-radius: 5px;
@@ -164,18 +164,18 @@ h2 {
 }
 .secondary {
     background: transparent;
-    border: 1px solid #591b26;
-    color: #591b26;
+    border: 1px solid #bfb38e;
+    color: #bfb38e;
     margin: 5px;
 }
 .secondary:hover {
-    background: #591b26;
+    background: #bfb38e;
     color: #000;
 }
 
 /* Contact Section */
 #contact a {
-    color: #591b26;
+    color: #bfb38e;
     font-size: 1.2rem;
     text-decoration: none;
 }
@@ -196,14 +196,14 @@ h2 {
     color: #fff;
     text-decoration: none;
     border-radius: 8px;
-    border: 1px solid #591b26;
+    border: 1px solid #bfb38e;
     transition: all 0.3s ease;
     font-size: 0.9rem;
     font-weight: bold;
 }
 
 .social-btn:hover {
-    background: #591b26;
+    background: #bfb38e;
     color: #000;
     transform: translateY(-3px);
 }
